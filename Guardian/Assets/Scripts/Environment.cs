@@ -13,7 +13,7 @@ public class Environment
             if(instance==null)
             {
                 instance = new Environment();
-                instance.Wp.AddRange(GameObject.FindGameObjectsWithTag("Wp"));
+                instance.Wp.AddRange(GameObject.FindGameObjectsWithTag("Checkpoint"));
 
             }
             return instance;
