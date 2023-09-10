@@ -75,7 +75,7 @@ public class Idle : State
     }
     public override void Enter()
     {
-        anim.SetTrigger("IsIdle");
+        anim.SetTrigger("isIdle");
         base.Enter();
     }
     public override void Update()
@@ -93,7 +93,7 @@ public class Idle : State
     }
     public override void Exit()
     {
-        anim.ResetTrigger("IsIdle");
+        anim.ResetTrigger("isIdle");
         base.Exit();
     }
 }
@@ -121,7 +121,7 @@ public class Patrol : State
                 lastDist = dist;
             }
         }
-        anim.SetTrigger("IsWalking");
+        anim.SetTrigger("isWalking");
         base.Enter();
     }
     public override void Update()
@@ -139,7 +139,7 @@ public class Patrol : State
     }
     public override void Exit()
     {
-        anim.ResetTrigger("IsWalking");
+        anim.ResetTrigger("isWalking");
         base.Exit();
     }
 }
@@ -154,7 +154,7 @@ public class Pursue : State
     }
     public override void Enter()
     {
-        anim.SetTrigger("IsRunning");
+        anim.SetTrigger("isRunning");
         base.Enter();
     }
     public override void Update()
@@ -176,7 +176,7 @@ public class Pursue : State
     }
     public override void Exit()
     {
-        anim.ResetTrigger("IsRunning");
+        anim.ResetTrigger("isRunning");
         base.Exit();
     }
 }
@@ -193,7 +193,7 @@ public class Attack : State
     }
     public override void Enter()
     {
-        anim.SetTrigger("IsShooting");
+        anim.SetTrigger("isShooting");
         shoot.Play();
         agent.isStopped = true;
         base.Enter();
@@ -213,7 +213,7 @@ public class Attack : State
     }
     public override void Exit()
     {
-        anim.ResetTrigger("IsShooting");
+        anim.ResetTrigger("isShooting");
         shoot.Stop();
         base.Exit();
     }
